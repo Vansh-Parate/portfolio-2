@@ -1,5 +1,7 @@
 "use client";
 import { FiGithub } from "react-icons/fi";
+import { FaInstagram, FaLinkedin } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 import {motion} from "framer-motion";
 
 const Navigationcontent=[{
@@ -47,6 +49,27 @@ export default function Navigationbar() {
           <a href={"https://github.com/Vansh-Parate"} target="_blank">
             <div>
               <FiGithub  className="cursor-pointer transform transition hover:scale-110 text-white hover:text-gray-400"/>
+            </div>
+          </a>
+          <a
+            href={"https://www.linkedin.com/in/rahul-soni-50b806203/"}
+            target="_blank"
+          >
+            <div>
+              <FaLinkedin className="cursor-pointer transform transition text-cyan-600  hover:scale-110 hover:text-gray-400" />
+            </div>
+          </a>
+          <a href={"https://twitter.com/SoniRahul3108"} target="_blank">
+            <div>
+              <FaXTwitter className="cursor-pointer transform transition hover:scale-110 text-white hover:text-gray-400" />
+            </div>
+          </a>
+          <a
+            href={"https://www.instagram.com/index.developers/"}
+            target="_blank"
+          >
+            <div>
+              <FaInstagram className="cursor-pointer transform transition text-xl lg:text-2xl text-pink-800 hover:scale-110 hover:text-gray-400" />
             </div>
           </a>
           </div>
