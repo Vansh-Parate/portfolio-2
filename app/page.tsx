@@ -1,7 +1,8 @@
 import Navigationbar from  "@components/main/Navbar"
 import '@app/globals.css'
 import { FloatingDockUse } from "@components/main/Dock";
-
+// import { TextGenerateEffectDemo } from "@components/main/HeroText";
+import Hero from "@components/main/Hero";
 
 export default function Home() {
  
@@ -13,6 +14,8 @@ export default function Home() {
       <div className=" flex flex-col w-full font-inter ">
         <Navigationbar />
         <FloatingDockUse />
+        <Hero />
+        {/* <TextGenerateEffectDemo /> */}
       </div>
       </div>
       </>
