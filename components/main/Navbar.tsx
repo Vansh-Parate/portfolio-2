@@ -1,11 +1,13 @@
 "use client";
-import { FiGithub } from "react-icons/fi";
-import { FaInstagram, FaLinkedin } from "react-icons/fa6";
-import { FaXTwitter } from "react-icons/fa6";
+import { AiOutlineInstagram } from "react-icons/ai";
+import { BiLogoGithub } from "react-icons/bi";
+import { BiLogoYoutube } from "react-icons/bi";
+import { BsTwitterX } from "react-icons/bs";
+import { FaLinkedin } from "react-icons/fa";
 import {motion} from "framer-motion";
 
 const Navigationcontent=[{
-  id:"1", 
+  id:"1",
   name:"Home"
 },{
   id:"2",
@@ -23,10 +25,6 @@ const Navigationcontent=[{
   id:"5",
   name:"Contact"
 }]
-// {
-//   id:"6",
-//   name:"Resume"
-// }
 
 export default function Navigationbar() {
   const scrollToSection = (id: string) => {
@@ -36,7 +34,8 @@ export default function Navigationbar() {
     }
   };
   return (
-      <div className="w-11/12 2xl:max-w-9xl pr-9   py-4 z-50 fixed top-2 h-12 md:h-16 2xl:h-20 flex  items-center md:justify-end rounded-full shadow-lg">
+    <motion.div initial={{opacity:0.2}} animate={{opacity:1}} transition={{delay:0.4,duration:2}} className="flex justify-center max-w-screen">
+      <div className="w-11/12 2xl:max-w-7xl   py-4 z-50 fixed top-2 h-12 md:h-16 2xl:h-20 flex items-center md:justify-between rounded-full bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-90  shadow-lg shadow-black drop-shadow-lg">
         <div className=" flex md:flex-none flex-grow justify-around text-xs md:text-sm text-white  md:gap-8 lg:gap-12 mx-2 md:ml-10">
           {Navigationcontent.map((nav)=>{
 
@@ -47,35 +46,38 @@ export default function Navigationbar() {
             {nav.name}
           </div>
           })}
+         
         </div>
-        {/* <div className="md:flex md:justify-between gap-6 hidden   md:gap-10 items-center mr-6 md:mr-12  lg:text-xl">
+
+        <div className="md:flex md:justify-between gap-6 hidden   md:gap-10 items-center mr-6 md:mr-12  lg:text-xl">
           <a href={"https://github.com/Vansh-Parate"} target="_blank">
             <div>
-              <FiGithub  className="cursor-pointer transform transition hover:scale-110 text-white hover:text-gray-400"/>
+              <BiLogoGithub className="cursor-pointer transform transition hover:scale-110 text-white hover:text-gray-400"></BiLogoGithub>
             </div>
           </a>
           <a
-            href={"https://www.linkedin.com/in/rahul-soni-50b806203/"}
+            href={"https://www.linkedin.com/in/vansh-parate-b1751a27b/"}
             target="_blank"
           >
             <div>
-              <FaLinkedin className="cursor-pointer transform transition text-cyan-600  hover:scale-110 hover:text-gray-400" />
+              <FaLinkedin className="cursor-pointer transform transition text-cyan-600  hover:scale-110 hover:text-gray-400"></FaLinkedin>
             </div>
           </a>
-          <a href={"https://twitter.com/SoniRahul3108"} target="_blank">
+          <a href={"https://twitter.com/radeon74055"} target="_blank">
             <div>
-              <FaXTwitter className="cursor-pointer transform transition hover:scale-110 text-white hover:text-gray-400" />
+              <BsTwitterX className="cursor-pointer transform transition hover:scale-110 text-white hover:text-gray-400"></BsTwitterX>
             </div>
           </a>
           <a
-            href={"https://www.instagram.com/index.developers/"}
+            href={"https://www.instagram.com/vansh._.107/"}
             target="_blank"
           >
             <div>
-              <FaInstagram className="cursor-pointer transform transition text-xl lg:text-2xl text-pink-800 hover:scale-110 hover:text-gray-400" />
+              <AiOutlineInstagram className="cursor-pointer transform transition text-xl lg:text-2xl text-pink-800 hover:scale-110 hover:text-gray-400"></AiOutlineInstagram>
             </div>
           </a>
-          </div> */}
-     </div>
+        </div>
+      </div>
+    </motion.div>
   );
 }
