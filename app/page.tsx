@@ -1,6 +1,7 @@
 import Navigationbar from  "@components/main/Navbar"
 import Hero from "@components/main/Hero";
 import '@app/globals.css'
+import AboutMe from "@components/main/AboutMe";
 
 export default function Home() {
  
@@ -10,6 +11,7 @@ export default function Home() {
       <div className=" flex flex-col w-full font-inter ">
         <Navigationbar />
         <Hero />
+        <AboutMe />
       </div>
       </div>
       </>
